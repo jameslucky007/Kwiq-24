@@ -104,32 +104,32 @@ const Navbar = () => {
           <div className="container mx-auto">
             <ul className="flex flex-wrap justify-center md:content-center gap-x-8 gap-y-2 py-4 text-white font-medium">
               <li>
-                <Link href="/" className="hover:text-blue-200 transition-colors">
+                <Link href="/" className=" transition-colors  hover:underline">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/updates" className="hover:text-blue-200 transition-colors">
-                  Updates
+                <Link href="/updates" className=" transition-colors  hover:underline">
+                 Services
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-blue-200 transition-colors">
+                <Link href="/products" className=" transition-colors  hover:underline">
                   Products
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-blue-200 transition-colors">
-                  Services
+                <Link href="/services" className=" transition-colors  hover:underline">
+                Updates
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-blue-200 transition-colors">
+                <Link href="/contact" className=" transition-colors  hover:underline">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-blue-200 transition-colors">
+                <Link href="/blog" className=" transition-colors  hover:underline">
                   Blog
                 </Link>
               </li>
