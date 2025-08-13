@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const About = () => {
@@ -23,7 +24,7 @@ const About = () => {
 
         {/* Right Side - Text */}
         <div className="col-12 col-md-6 col-lg-7 abouttext" data-aos="fade-left">
-          <h2> About Us <iconify-icon icon="material-symbols:bolt-outline"></iconify-icon></h2>
+          <h2> About Us meeeeeeeeeeee <iconify-icon icon="material-symbols:bolt-outline"></iconify-icon></h2>
           <p>
             Our Integrator company provides solutions in IT, Networking, Security, and Computer Solutions. We have expertise in a wide range of security products. 
             Our main focus is on Network Security, Endpoint Security, and Backup Solutions for small, medium, and enterprise segment customers.<br /><br />

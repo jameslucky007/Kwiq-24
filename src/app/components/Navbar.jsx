@@ -19,6 +19,7 @@ const Navbar = () => {
                 alt="Call icon"
                 width={16}
                 height={16}
+                // unoptimized
               />
               +91 9876543210
             </a>

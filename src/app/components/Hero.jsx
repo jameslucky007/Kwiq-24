@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+
 
 const Hero = () => {
   // Array of image URLs for the slider. You can replace these with your actual image paths.
