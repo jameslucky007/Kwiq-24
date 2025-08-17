@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 
 
 const Hero = () => {
-  // Array of image URLs for the slider. You can replace these with your actual image paths.
-  // Using placeholder images for demonstration.
   const slides = [
     'https://placehold.co/1200x600/ffffff/000000?text=Slide+1',
     'https://placehold.co/1200x600/ffffff/000000?text=Slide+2',
