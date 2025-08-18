@@ -5,10 +5,8 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <nav className="bg-white shadow-sm">
-      {/* 🔹 Top Navbar Section */}
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-3 px-4 gap-4">
-        
-        {/* Contact Info (Left) */}
+        {/* Contact Info */}
         <div className="flex flex-col sm:flex-row gap-3 text-sm md:text-base text-gray-700">
           <a
             href="tel:9876543210"
@@ -26,11 +24,11 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Logo (Center) */}
+        {/* Logo */}
         <div className="flex justify-center">
           <Link href="/" aria-label="Home">
             <Image
-              src="/path/to/your/logo.png" // update this
+              src="/logo.png"   // ✅ make sure logo.png exists in /public
               alt="Company Logo"
               width={140}
               height={45}
@@ -39,7 +37,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Social Media (Right) */}
+        {/* Social Media */}
         <div className="flex items-center gap-3">
           <a
             href="https://facebook.com/kwiq24"
@@ -71,40 +69,16 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* 🔹 Main Navigation Menu (Fixed Top) */}
+      {/* Main Navigation */}
       <div className="bg-blue-600 shadow-md sticky top-0 left-0 right-0 z-50">
         <div className="container mx-auto">
           <ul className="flex justify-center gap-x-10 py-4 text-white font-medium">
-            <li>
-              <Link href="/" className="hover:underline">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/services" className="hover:underline">
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link href="/products" className="hover:underline">
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link href="/updates" className="hover:underline">
-                Updates
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="hover:underline">
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog" className="hover:underline">
-                Blog
-              </Link>
-            </li>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/products">Products</Link></li>
+            <li><Link href="/updatesInfo">Updates</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
+            <li><Link href="/blog">Blog</Link></li>
           </ul>
         </div>
       </div>
