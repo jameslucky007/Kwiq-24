@@ -73,9 +73,9 @@ const Navbar = () => {
       <div className="bg-blue-600 shadow-md sticky top-0 left-0 right-0 z-50">
         <div className="container mx-auto">
           <ul className="flex justify-center gap-x-10 py-4 text-white font-medium">
-            <li><Link href="/">Home</Link></li>
+            <li> <Link href="/">Home</Link> </li>
             <li><Link href="/services">Services</Link></li>
-            <li><Link href="/products">Products</Link></li>
+            <li><Link href="/Product">Products</Link></li>
             <li><Link href="/updatesInfo">Updates</Link></li>
             <li><Link href="/contact">Contact</Link></li>
             <li><Link href="/blog">Blog</Link></li>
