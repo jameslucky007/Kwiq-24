@@ -74,11 +74,11 @@ const Navbar = () => {
         <div className="container mx-auto">
           <ul className="flex justify-center gap-x-10 py-4 text-white font-medium">
             <li> <Link href="/">Home</Link> </li>
-            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/Services">Services</Link></li>
             <li><Link href="/Product">Products</Link></li>
-            <li><Link href="/updatesInfo">Updates</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-            <li><Link href="/blog">Blog</Link></li>
+            <li><Link href="/Updates">Updates</Link></li>
+            <li><Link href="/Contact">Contact</Link></li>
+            <li><Link href="/Blog">Blog</Link></li>
           </ul>
         </div>
       </div>
