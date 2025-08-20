@@ -1,10 +1,8 @@
+/* Links */
+
 @import "tailwindcss";
-/* GOOGLE fONTS */ 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /* Boilerplate code */
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -31,24 +29,5 @@ body {
 }
 
 
-/* Navbar Section  */
 
-.navbar-social-icons {
-  padding: 10px;
-  margin-right: 25px;
-}
-
-
-.navbar-info a {
-
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-
-}
-
-.nav-menu li {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  
-}
 
