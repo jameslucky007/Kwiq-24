@@ -1,3 +1,4 @@
+import { Link } from "lucide-react";
 import React from "react";
 // Removed react-icons/fa import to resolve the compilation error.
 // We will use inline SVG for the arrow icon and suggest alternatives for others.
@@ -111,9 +112,10 @@ const Services = () => {
 
       {/* Know More Button */}
       <div className="mt-12">
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+       <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
           Know More
-        </button>
+        </button> 
+      
       </div>
     </section>
   );
