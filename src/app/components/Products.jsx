@@ -8,56 +8,56 @@ const Products = () => {
       category: "DRIVING LICENCE",
       title: "Andhra Pradesh Driving Licence PVC Card smart card Print",
       price: "₹50.00",
-      image: "/api/placeholder/280/180"
+      image: ""
     },
     {
       id: 2,
       category: "DRIVING LICENCE", 
       title: "Assam Driving License",
       price: "₹50.00",
-      image: "/api/placeholder/280/180"
+      image: ""
     },
     {
       id: 3,
       category: "DRIVING LICENCE",
       title: "Assam Vehicle Registration Certificate (RC)",
       price: "₹50.00", 
-      image: "/api/placeholder/280/180"
+      image: ""
     },
     {
       id: 4,
       category: "DRIVING LICENCE",
       title: "Bihar Driving License",
       price: "₹50.00",
-      image: "/api/placeholder/280/180"
+      image: ""
     },
     {
       id: 5,
       category: "DRIVING LICENCE",
       title: "Delhi Driving License PVC Card",
       price: "₹50.00",
-      image: "/api/placeholder/280/180"
+      image: ""
     },
     {
       id: 6,
       category: "DRIVING LICENCE",
       title: "Gujarat Driving License Smart Card",
       price: "₹50.00",
-      image: "/api/placeholder/280/180"
+      image: ""
     },
     {
       id: 7,
       category: "DRIVING LICENCE", 
       title: "Karnataka Driving License",
       price: "₹50.00",
-      image: "/api/placeholder/280/180"
+      image: ""
     },
     {
       id: 8,
       category: "DRIVING LICENCE",
       title: "Maharashtra Driving License",
       price: "₹50.00",
-      image: "/api/placeholder/280/180"
+      image: ""
     },
  
   ];
