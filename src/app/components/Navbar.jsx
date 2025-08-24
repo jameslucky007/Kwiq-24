@@ -28,7 +28,7 @@ const Navbar = () => {
         <div className="flex justify-center">
           <Link href="/" aria-label="Home">
             <Image
-              src="/logo.png"   // ✅ make sure logo.png exists in /public
+              src="/logo.svg"   
               alt="Company Logo"
               width={140}
               height={45}
