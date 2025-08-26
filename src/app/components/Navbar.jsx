@@ -31,7 +31,7 @@ const Navbar = () => {
               className="hover:text-blue-600 flex items-center gap-2 transition-colors"
             >
               <Phone size={16} />
-              +91 9876543210
+              +91 89205 67481
             </a>
             <a
               href="mailto:info@kwiq24.com"
