@@ -52,13 +52,6 @@ const Products = () => {
       price: "₹50.00",
       image: ""
     },
-    {
-      id: 8,
-      category: "DRIVING LICENCE",
-      title: "Maharashtra Driving License",
-      price: "₹50.00",
-      image: ""
-    },
  
   ];
 
