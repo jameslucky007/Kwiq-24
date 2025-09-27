@@ -1,25 +1,27 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins, Roboto } from "next/font/google";
 import "./global.css";
-
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], 
   display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
 export const metadata = {
   title: "Kwiq 24",
-  description: "aaaaaaaaaaaaaaaaaaaaa",
+  description: "It is a versatile IT service provider website.",
   icons: {
     icon: "/icons/Favicon.png",
   },
@@ -28,15 +30,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* Prevent hydration issues */}
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="format-detection" content="date=no" />
-        <meta name="format-detection" content="address=no" />
-        <meta name="format-detection" content="email=no" />
-      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+
+        className={`${poppins.variable} ${roboto.variable} font-sans antialiased`}
         suppressHydrationWarning={true}
       >
         <div id="root">
@@ -49,19 +45,7 @@ export default function RootLayout({ children }) {
           {/* ✅ Footer on all pages */}
           <Footer />
         </div>
-
-        {/* Script to prevent extension interference */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              if (typeof window !== 'undefined') {
-                window.__NEXT_HYDRATION_CB = window.__NEXT_HYDRATION_CB || function() {};
-              }
-            `,
-          }}
-        />
       </body>
     </html>
   );
 }
-          
