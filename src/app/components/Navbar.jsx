@@ -30,9 +30,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hideTopBar, setHideTopBar] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navItems = [
     { href: "/", label: "Home" },
@@ -48,14 +46,23 @@ const Navbar = () => {
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
+    let ticking = false;
 
-    const handleScroll = () => {
+    const updateScroll = () => {
       if (window.scrollY > lastScrollY && window.scrollY > 80) {
         setHideTopBar(true);
       } else {
         setHideTopBar(false);
       }
       lastScrollY = window.scrollY;
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateScroll);
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -66,8 +73,8 @@ const Navbar = () => {
     <nav className="bg-white shadow-lg sticky top-0 z-50 font-sans">
       {/* Top Bar */}
       <div
-        className={`transition-all duration-500 overflow-hidden ${
-          hideTopBar ? "max-h-0 opacity-0" : "max-h-32 opacity-100"
+        className={`transition-transform duration-200 ease-out ${
+          hideTopBar ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
