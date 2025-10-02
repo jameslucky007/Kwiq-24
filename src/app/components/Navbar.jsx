@@ -29,6 +29,7 @@ const Link = (props) => <a {...props}>{props.children}</a>;
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hideTopBar, setHideTopBar] = useState(false);
+  const [isNavSticky, setIsNavSticky] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -50,10 +51,17 @@ const Navbar = () => {
 
     const updateScroll = () => {
       if (window.scrollY > lastScrollY && window.scrollY > 80) {
-        setHideTopBar(true);
+        setHideTopBar(true); // scroll down → hide top
       } else {
-        setHideTopBar(false);
+        setHideTopBar(false); // scroll up → show top
       }
+
+      if (window.scrollY > 120) {
+        setIsNavSticky(true);
+      } else {
+        setIsNavSticky(false);
+      }
+
       lastScrollY = window.scrollY;
       ticking = false;
     };
@@ -70,15 +78,16 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50 font-sans">
-      {/* Top Bar */}
+    <nav className="bg-white shadow-lg font-sans">
+      {/* Top Section (Logo + Contact + Social) */}
       <div
-        className={`transition-transform duration-200 ease-out ${
+        className={`transition-transform duration-300 ease-out ${
           hideTopBar ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4 lg:py-3">
+            {/* Contact Info */}
             <div className="hidden lg:flex items-center gap-8 text-gray-700 font-inter">
               <a
                 href="tel:918920567481"
@@ -96,12 +105,14 @@ const Navbar = () => {
               </a>
             </div>
 
+            {/* Logo */}
             <div className="flex-1 flex justify-center lg:justify-start lg:w-auto lg:absolute lg:left-1/2 lg:-translate-x-1/2">
               <Link href="/" aria-label="Home">
                 <Image src="/logo.svg" alt="Company Logo" width={160} height={50} />
               </Link>
             </div>
 
+            {/* Social + Mobile Button */}
             <div className="flex items-center gap-3">
               <div className="hidden lg:flex items-center gap-2">
                 <SocialIcon href="https://facebook.com/kwiq24" label="Facebook" icon={Facebook} colorClass="bg-blue-700" />
@@ -121,8 +132,12 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Main Navigation */}
-      <div className={`shadow-inner hidden lg:block border-t border-blue-500/30 ${brandBgColor}`}>
+      {/* Main Navigation (sticky when scrolled) */}
+      <div
+        className={`shadow-inner border-t border-blue-500/30 ${brandBgColor} transition-all duration-300 ${
+          isNavSticky ? "fixed top-0 left-0 w-full z-40" : ""
+        }`}
+      >
         <div className="container mx-auto">
           <ul className="flex justify-center gap-x-12 py-3 text-white font-medium text-lg">
             {navItems.map((item, index) => (

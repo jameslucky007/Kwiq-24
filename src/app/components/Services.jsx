@@ -86,15 +86,6 @@ const Services = () => {
       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
         We offer various <span className="text-blue-500">Services</span>
       </h2>
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
-        We offer various <span className="text-blue-500">Services</span>
-      </h2>
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
-        We offer various <span className="text-blue-500">Services</span>
-      </h2>
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
-        We offer various <span className="text-blue-500">Services</span>
-      </h2>
       {/* Centered HR with specific width and color */}
       <hr className="border-t-2 border-gray-400 w-24 mx-auto mb-16" />
 
